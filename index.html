@@ -1,101 +1,124 @@
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ahmad Alzafiri Portfolio</title>
-    <script>
-      function toggleTheme() {
-        document.body.classList.toggle('dark');
-      }
-    </script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      body.dark {
-        background-color: #1f2937;
-        color: #ffffff;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ahmad Alzafiri | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-800 transition-colors duration-300">
+<div class="background-circle circle-top-right"></div>
+<div class="background-circle circle-bottom-left"></div>
 
-      .dark .text-purple-700 {
-        color: #c084fc;
-      }
+  <header class="p-6 md:p-12 flex justify-between items-start">
+    <div>
+      <h1 class="text-4xl font-bold text-purple-700">Ahmad Alzafiri</h1>
+      <p class="text-lg mt-2">Full-Stack Developer | Product Owner | Creative Technologist</p>
+      <p class="mt-1">
+        Auckland, New Zealand —
+        <a href="mailto:ahmadalzafiri1@gmail.com" class="text-purple-600 underline">ahmadalzafiri1@gmail.com</a> |
+        <a href="tel:+64210406887" class="text-purple-600 underline">+64 21 406 887</a> | <a href="https://github.com/mcdgithubber/" class="text-purple-600 underline"> Github</a>
+      </p>
+    </div>
+    <button onclick="toggleTheme()" class="px-4 py-2 rounded bg-purple-600 text-white hover:bg-purple-700 transition">
+      Toggle Theme
+    </button>
+  </header>
 
-      .dark .text-purple-600 {
-        color: #c084fc;
-      }
-    </style>
-  </head>
-  <body class="bg-white text-gray-800 p-6 md:p-12 transition-colors duration-300">
-    <header class="mb-12 flex justify-between items-start">
-      <div>
-        <h1 class="text-4xl font-bold text-purple-700">Ahmad Alzafiri</h1>
-        <p class="text-lg mt-2">Technical Product Owner | IT Advisor | Problem Solver</p>
-        <p class="mt-1">Auckland, New Zealand — <a href="mailto:ahmadalzafiri1@gmail.com" class="text-purple-600 underline">ahmadalzafiri1@gmail.com</a> | <a href="tel:+64210406887" class="text-purple-600 underline">+64 21 406 887</a>
-        </p>
-      </div>
-      <button onclick="toggleTheme()" class="px-4 py-2 rounded bg-purple-600 text-white hover:bg-purple-700 transition">Toggle Theme</button>
-    </header>
-    <section class="mb-12">
-      <h2 class="text-2xl font-semibold text-purple-700 mb-4">About Me</h2>
-      <p> With 10+ years across development, digital transformation, and IT consulting, I bridge the gap between technology and people. I've built platforms, scaled real-world businesses, and led teams toward smarter, cleaner systems. Whether it’s product ownership, advisory, or full-scale solution delivery — I’m here to make things work better. </p>
+  <main class="p-6 md:p-12 space-y-16">
+
+    <section>
+      <h2 class="section-title">About Me</h2>
+      <p>
+        I'm a product-minded software engineer with 10+ years of experience blending technical delivery, digital advisory,
+        and user-centered development. I specialize in building practical, scalable solutions — from dashboards and scheduling platforms
+        to full CRM systems.
+      </p>
     </section>
-    <section class="mb-12">
-      <h2 class="text-2xl font-semibold text-purple-700 mb-4">Experience</h2>
+
+    <section>
+      <h2 class="section-title">Experience</h2>
       <ul class="space-y-4">
         <li>
-          <strong>Freelance Technical Product Advisor</strong> (2020–Present) <br /> Delivered bespoke platforms and integrations. Advised businesses on cloud, UX, automation, and CRM strategy.
+          <strong>Freelance Technical Product Advisor</strong> (2020–Present) <br />
+          Delivered bespoke platforms and integrations. Advised businesses on cloud, UX, automation, and CRM strategy.
         </li>
         <li>
-          <strong>IT Advisor – Auckland City Council</strong> (2018–2020) <br /> Supported internal teams with application enhancements, service mapping, and cross-department engagement.
+          <strong>IT Advisor – Auckland City Council</strong> (2018–2020) <br />
+          Supported internal teams with application enhancements, service mapping, and cross-department engagement.
         </li>
         <li>
-          <strong>.NET Developer – AIA, Auckland</strong> (2016–2018) <br /> Contributed to financial web platforms and worked closely with product and compliance teams.
+          <strong>.NET Developer – AIA, Auckland</strong> (2016–2018) <br />
+          Contributed to financial web platforms and worked closely with product and compliance teams.
         </li>
         <li>
-          <strong>Software Developer – Datacom</strong> (2014–2016) <br /> Built full-stack systems and dashboards, collaborated with client delivery teams.
+          <strong>Software Developer – Datacom</strong> (2014–2016) <br />
+          Built full-stack systems and dashboards, collaborated with client delivery teams.
         </li>
       </ul>
     </section>
-    <section class="mb-12">
-      <h2 class="text-2xl font-semibold text-purple-700 mb-4">Projects</h2>
-      <ul class="space-y-4">
+
+    <section>
+      <h2 class="section-title">Projects</h2>
+      <ul class="space-y-6">
         <li>
-          <strong>Sales CRM Dashboard</strong>
-          <br /> A multi-page sales and client management CRM built with HTML, CSS, and vanilla JS. Includes employee revenue gauges, charts, dark mode, mobile-friendly navigation, and live search. <br />
-          <a href="https://mcdgithubber.github.io/SalesCRM/index.html" target="_blank" class="text-purple-600 underline">🔗 Live Demo</a> | <a href="https://github.com/mcdgithubber/SalesCRM" target="_blank" class="text-purple-600 underline">📁 View Code</a>
+          <strong>Roster Wizard – Angular + .NET 8</strong><br />
+          A 2-week scheduling system with dark mode, printable calendar view, and shift-based logic.
+          Built using Clean Architecture, RESTful APIs, and PDF export features.
+          <br />
+          <a href="https://github.com/mcdgithubber/roster-wizard-frontend" class="text-purple-600 underline">🔗 View on GitHub</a>
         </li>
         <li>
-          <strong>Pokémon Deck Builder</strong>
-          <br /> A responsive web app for exploring Pokémon cards, building a custom deck, and managing it in-browser. Built with HTML, CSS, and vanilla JS using the PokéTCG API. Includes public API, async fetch, live search, local storage, theme toggle, and card interactions. <br />
-          <a href="https://mcdgithubber.github.io/pokemoncardviewer/" target="_blank" class="text-purple-600 underline">🔗 Live Demo</a> | <a href="https://github.com/mcdgithubber/pokemoncardviewer" target="_blank" class="text-purple-600 underline">📁 View Code</a>
+          <strong>Sales CRM Dashboard</strong><br />
+          A multi-page sales and client management CRM built with HTML, CSS, and vanilla JS. Includes employee revenue gauges, charts, dark mode, mobile-friendly navigation, and live search. <br />
+          <a href="https://mcdgithubber.github.io/SalesCRM/index.html" target="_blank" class="text-purple-600 underline">🔗 Live Demo</a> |
+          <a href="https://github.com/mcdgithubber/SalesCRM" target="_blank" class="text-purple-600 underline">📁 View Code</a>
         </li>
         <li>
-          <strong>Motivation Hub</strong>
-          <br /> A single page app which provides new motivational quotes with the ability to save and manage saved quotes it in-browser. Built with HTML, CSS, and vanilla JS using <a href="https://www.api-ninjas.com/" target="_blank" class="text-purple-600 underline">API NINJAS</a>. Includes HTTP request with headers, async fetch, local storage and DOM control. <br />
-          <a href="https://mcdgithubber.github.io/motivation-hub/" target="_blank" class="text-purple-600 underline">🔗 Live Demo</a> | <a href="https://github.com/mcdgithubber/motivation-hub" target="_blank" class="text-purple-600 underline">📁 View Code</a>
+          <strong>Pokémon Deck Builder</strong><br />
+          A responsive web app for exploring Pokémon cards, building a custom deck, and managing it in-browser.
+          Built with HTML, CSS, and vanilla JS using the PokéTCG API. Includes public API, async fetch, live search, local storage, theme toggle, and card interactions. <br />
+          <a href="https://mcdgithubber.github.io/pokemoncardviewer/" target="_blank" class="text-purple-600 underline">🔗 Live Demo</a> |
+          <a href="https://github.com/mcdgithubber/pokemoncardviewer" target="_blank" class="text-purple-600 underline">📁 View Code</a>
         </li>
         <li>
-          <strong>Martial Arts Academy Platform</strong>
-          <br /> Full CRM, payment, and member management system — scaled to 400+ users.
+          <strong>Motivation Hub</strong><br />
+          A single page app that provides motivational quotes and saves favorites in-browser.
+          Built with HTML, CSS, vanilla JS, and the API Ninjas service. <br />
+          <a href="https://mcdgithubber.github.io/motivation-hub/" target="_blank" class="text-purple-600 underline">🔗 Live Demo</a> |
+          <a href="https://github.com/mcdgithubber/motivation-hub" target="_blank" class="text-purple-600 underline">📁 View Code</a>
         </li>
         <li>
-          <strong>Client Dashboard Automation</strong>
-          <br /> KPI dashboards and self-service tools using .NET, Blazor, and Azure.
+          <strong>Martial Arts Academy Platform</strong><br />
+          Full CRM, payment, and member management system — scaled to 400+ users.
+        </li>
+        <li>
+          <strong>Client Dashboard Automation</strong><br />
+          KPI dashboards and self-service tools using .NET, Blazor, and Azure.
         </li>
       </ul>
     </section>
-    <section class="mb-12">
-      <h2 class="text-2xl font-semibold text-purple-700 mb-4">Hobbies & Interests</h2>
+
+    <section>
+      <h2 class="section-title">Hobbies & Interests</h2>
       <ul class="list-disc pl-6">
         <li>Reading — non-fiction, leadership, and personal development</li>
         <li>Martial Arts — black belt in multiple disciplines, coach, and amateur kickboxer</li>
         <li>Mentoring — helping developers and youth grow through tech</li>
       </ul>
     </section>
-    <section class="mb-12">
-      <h2 class="text-2xl font-semibold text-purple-700 mb-4">Contact</h2>
-      <p>Want to work together or chat tech? Email me: <a href="mailto:ahmadalzafiri1@gmail.com" class="text-purple-600 underline">ahmadalzafiri1@gmail.com</a>
+
+    <section>
+      <h2 class="section-title">Contact</h2>
+      <p>Want to work together or chat tech? Email me:
+        <a href="mailto:ahmadalzafiri1@gmail.com" class="text-purple-600 underline">ahmadalzafiri1@gmail.com</a>
       </p>
     </section>
-  </body>
+
+  </main>
+
+</body>
 </html>
